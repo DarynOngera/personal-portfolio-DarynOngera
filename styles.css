@@ -1,63 +1,104 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
 body {
   font-family: Arial, sans-serif;
   padding: 0 20px;
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
-  background: #f4f4f4;
+  background: #000; /* black theme */
+  color: #eee; /* light text */
 }
 
+/* Navigation */
 nav ul {
   list-style-type: none;
   padding: 0;
-  background: #333;
-  display: flex;
-  gap: 10px;
-}
-
-nav ul li {
   margin: 0;
+  background: #111;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  border-bottom: 2px solid #c00; /* red underline */
 }
 
 nav ul li a {
   text-decoration: none;
-  color: white;
-  padding: 10px 15px;
+  color: #eee;
+  padding: 12px 18px;
   display: inline-block;
+  transition: all 0.3s ease;
 }
 
 nav ul li a.active,
 nav ul li a:hover {
-  background-color: #555;
+  background-color: #c00; /* red highlight */
+  color: #fff;
+  transform: scale(1.1);
+  border-radius: 2px;
 }
 
+/* Header & Sections */
 header, section {
-  background: white;
-  padding: 20px;
+  background: transparent; /* remove card style */
+  padding: 25px 0;
   margin-top: 20px;
-  border-radius: 8px;
+  border-bottom: 1px solid #222;
 }
 
+/* Headings */
+h1, h2, h3 {
+  color: #c00;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 15px;
+}
+
+/* Forms */
 form label {
   font-weight: bold;
+  color: #fff;
 }
 
 form input, form textarea {
   width: 100%;
-  padding: 8px;
-  margin: 6px 0 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 10px;
+  margin: 6px 0 16px;
+  border: 1px solid #c00;
+  border-radius: 2px;
+  background: #111;
+  color: #eee;
+  transition: all 0.3s ease;
 }
 
+form input:focus, form textarea:focus {
+  outline: none;
+  border-color: #ff2222;
+  transform: scale(1.02);
+  box-shadow: 0 0 6px #c00;
+}
+
+/* Buttons */
 form button {
   cursor: pointer;
-  background-color: #333;
+  background-color: #c00;
   color: white;
-  padding: 10px 20px;
+  padding: 12px 24px;
   border: none;
-  border-radius: 4px;
+  border-radius: 2px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
 }
 
 form button:hover {
-  background-color: #555;
+  background-color: #ff2222;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 4px 8px rgba(255, 0, 0, 0.4);
 }
+
